@@ -10,7 +10,9 @@
 		AF6B5DB6222411EC00E0BB28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B5DB5222411EC00E0BB28 /* AppDelegate.swift */; };
 		AF6B5DB8222411EC00E0BB28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B5DB7222411EC00E0BB28 /* ViewController.swift */; };
 		AF6B5DBA222411ED00E0BB28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF6B5DB9222411ED00E0BB28 /* Assets.xcassets */; };
-		AF6B5DBD222411ED00E0BB28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6B5DBB222411ED00E0BB28 /* Main.storyboard */; };
+		AF6B5DC82224124F00E0BB28 /* NSImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B5DC72224124F00E0BB28 /* NSImageExtensions.swift */; };
+		AF6B5DCA2224127700E0BB28 /* TextureAtlas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF6B5DC92224127700E0BB28 /* TextureAtlas.swift */; };
+		AF6B5DCC222412C700E0BB28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF6B5DCB222412C700E0BB28 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,9 +20,12 @@
 		AF6B5DB5222411EC00E0BB28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF6B5DB7222411EC00E0BB28 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AF6B5DB9222411ED00E0BB28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AF6B5DBC222411ED00E0BB28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AF6B5DBE222411ED00E0BB28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF6B5DBF222411ED00E0BB28 /* Sheet_Cutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sheet_Cutter.entitlements; sourceTree = "<group>"; };
+		AF6B5DC6222411FE00E0BB28 /* Sheet Cutter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Sheet Cutter.entitlements"; sourceTree = "<group>"; };
+		AF6B5DC72224124F00E0BB28 /* NSImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImageExtensions.swift; sourceTree = "<group>"; };
+		AF6B5DC92224127700E0BB28 /* TextureAtlas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureAtlas.swift; sourceTree = "<group>"; };
+		AF6B5DCB222412C700E0BB28 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +58,25 @@
 		AF6B5DB4222411EC00E0BB28 /* Sheet Cutter */ = {
 			isa = PBXGroup;
 			children = (
+				AF6B5DC6222411FE00E0BB28 /* Sheet Cutter.entitlements */,
+				AF6B5DC5222411F300E0BB28 /* Source */,
 				AF6B5DB5222411EC00E0BB28 /* AppDelegate.swift */,
 				AF6B5DB7222411EC00E0BB28 /* ViewController.swift */,
+				AF6B5DCB222412C700E0BB28 /* Main.storyboard */,
 				AF6B5DB9222411ED00E0BB28 /* Assets.xcassets */,
-				AF6B5DBB222411ED00E0BB28 /* Main.storyboard */,
 				AF6B5DBE222411ED00E0BB28 /* Info.plist */,
 				AF6B5DBF222411ED00E0BB28 /* Sheet_Cutter.entitlements */,
 			);
 			path = "Sheet Cutter";
+			sourceTree = "<group>";
+		};
+		AF6B5DC5222411F300E0BB28 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AF6B5DC72224124F00E0BB28 /* NSImageExtensions.swift */,
+				AF6B5DC92224127700E0BB28 /* TextureAtlas.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +111,11 @@
 				TargetAttributes = {
 					AF6B5DB1222411EC00E0BB28 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -122,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6B5DBA222411ED00E0BB28 /* Assets.xcassets in Resources */,
-				AF6B5DBD222411ED00E0BB28 /* Main.storyboard in Resources */,
+				AF6B5DCC222412C700E0BB28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,22 +155,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF6B5DB8222411EC00E0BB28 /* ViewController.swift in Sources */,
+				AF6B5DC82224124F00E0BB28 /* NSImageExtensions.swift in Sources */,
 				AF6B5DB6222411EC00E0BB28 /* AppDelegate.swift in Sources */,
+				AF6B5DCA2224127700E0BB28 /* TextureAtlas.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AF6B5DBB222411ED00E0BB28 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AF6B5DBC222411ED00E0BB28 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AF6B5DC0222411ED00E0BB28 /* Debug */ = {
@@ -271,7 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Sheet Cutter/Sheet_Cutter.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Sheet Cutter/Sheet Cutter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 883EA9MSUE;
@@ -290,7 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "Sheet Cutter/Sheet_Cutter.entitlements";
+				CODE_SIGN_ENTITLEMENTS = "Sheet Cutter/Sheet Cutter.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 883EA9MSUE;
