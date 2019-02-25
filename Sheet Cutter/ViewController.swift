@@ -258,14 +258,7 @@ extension ViewController:NSTableViewDataSource {
     func numberOfRows(in tableView: NSTableView) -> Int {
         return textureAtlas.subTexture.count
     }
-    
-    //This is not
-    func tableView(_ tableView: NSTableView, dataCellFor tableColumn: NSTableColumn?, row: Int) -> NSCell? {
-        let cell = NSCell(textCell: textureAtlas.subTexture[row].name)
-        cell.title = textureAtlas.subTexture[row].name
-        return cell
-    }
-    
+
     //Creates the Table Cell view for display in our table and returns it.
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         //Our cell ID as defined in the storyboard
