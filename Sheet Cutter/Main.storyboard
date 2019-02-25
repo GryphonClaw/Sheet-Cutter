@@ -1025,11 +1025,11 @@
                                         <rect key="frame" x="322" y="13" width="32" height="32"/>
                                     </progressIndicator>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="He1-1p-yKV">
-                                        <rect key="frame" x="18" y="20" width="157" height="18"/>
+                                        <rect key="frame" x="171" y="20" width="4" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="18" id="e73-qm-yps"/>
                                         </constraints>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Saving Image %0 of %0..." id="wCL-iz-EhK">
+                                        <textFieldCell key="cell" lineBreakMode="clipping" id="wCL-iz-EhK">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1041,7 +1041,7 @@
                                     <constraint firstItem="rjH-aK-HaZ" firstAttribute="leading" secondItem="He1-1p-yKV" secondAttribute="trailing" constant="149" id="8aI-9U-m9G"/>
                                     <constraint firstAttribute="trailing" secondItem="rjH-aK-HaZ" secondAttribute="trailing" constant="13" id="Ehx-4S-9Wb"/>
                                     <constraint firstItem="He1-1p-yKV" firstAttribute="centerY" secondItem="rjH-aK-HaZ" secondAttribute="centerY" id="cO9-ba-3Sw"/>
-                                    <constraint firstItem="He1-1p-yKV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="84N-uh-tbP" secondAttribute="leading" symbolic="YES" id="uFD-DR-2Zj"/>
+                                    <constraint firstItem="He1-1p-yKV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="84N-uh-tbP" secondAttribute="leading" constant="20" symbolic="YES" id="uFD-DR-2Zj"/>
                                     <constraint firstItem="rjH-aK-HaZ" firstAttribute="leading" secondItem="84N-uh-tbP" secondAttribute="leading" constant="322" id="ypN-as-QNE"/>
                                 </constraints>
                             </customView>

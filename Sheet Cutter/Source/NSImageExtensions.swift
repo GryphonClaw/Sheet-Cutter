@@ -7,6 +7,8 @@
 
 import Cocoa
 
+//The following code is from a Stackoverflow answer located at the following URL:
+//https://stackoverflow.com/a/45042611/4902036
 public extension NSImage {
     public func writePNG(toURL url: URL) {
         
